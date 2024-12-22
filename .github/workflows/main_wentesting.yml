@@ -57,9 +57,11 @@ jobs:
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
-        uses: azure/webapps-deploy@v3
+        uses: azure/webapps-deploy@v2
         with:
-          app-name: 'WENTESTING'
+          app-name: 'waather123'
           slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_21B8414FDEF046379A5F05743C92440A }}
           package: .
+
           
